@@ -1,0 +1,40 @@
+/* body {
+    background-color: #f4f4f8;
+}
+
+.navbar { 
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+nav {
+    display: flex;
+    
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif; 
+    color: #0C0F0A;
+}
+
+a:hover {
+    color: #C97C5D;
+}
+
+a:active {
+    color: #263D42;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;   
+    align-items: flex-end;
+}
+
+li {
+    padding: 10px;   
+} */

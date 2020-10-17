@@ -1,0 +1,10 @@
+.footer {
+    display: grid;
+    grid-area: foot;
+    background-color: #C97C5D;
+}
+
+#copy {
+    align-self: center;
+    justify-self: center;
+}

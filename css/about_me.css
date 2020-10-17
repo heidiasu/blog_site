@@ -1,0 +1,45 @@
+/* About Page */
+
+#container-about {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: .25fr 1fr .25fr; 
+    grid-template-areas:
+        "nav nav"
+        "about about"
+        "foot foot";
+}
+
+    .about-me {
+        display: grid;
+        grid-area: about;
+        width: auto;
+        height: auto;
+        justify-self: center;
+        grid-template-columns: 2fr;
+        grid-template-rows: 50px 2fr;
+        grid-template-areas:
+            "name name"
+            "pic info"
+}
+    
+    #name {
+        grid-area: name;
+        justify-self: center;
+        
+}
+    
+    #para {
+        grid-area: info;
+        padding: 20px;
+}
+    
+    #about-pic {
+        grid-area: pic;
+        height: 300px;
+        width: auto;
+        justify-self: center;
+        padding: 20px;
+        
+}

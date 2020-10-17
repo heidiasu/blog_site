@@ -1,0 +1,280 @@
+@import "nav.css";
+@import "about_me.css";
+@import "footer.css";
+
+body {
+  background-color: #f4f4f8;
+  color: #0c0f0a;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 0.25fr 500px 3fr 0.25fr;
+  grid-template-areas:
+    "nav nav"
+    "hd hd"
+    "side main"
+    "foot foot";
+}
+
+/* Main Page */
+.header {
+  display: grid;
+  grid-area: hd;
+  background-image: url("../images/dogs_header.jpg");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: auto;
+  background-attachment: fixed;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "a a a"
+    "b b b"
+    "c c c";
+}
+
+.heading {
+  grid-area: b;
+  align-self: center;
+  justify-self: center;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-size: 0.75em;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+#p-posts {
+  text-align: center;
+}
+
+.blog-post {
+  list-style: none;
+}
+
+.main-content {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr 1fr;
+  grid-template-areas:
+    "title"
+    "p"
+    "img";
+}
+#main-head {
+  grid-area: title;
+  justify-self: center;
+}
+
+.heading-p {
+  grid-area: p;
+  padding: 10px;
+}
+
+#main-img {
+  grid-area: img;
+  height: 200px;
+  width: auto;
+  justify-self: center;
+}
+
+/* Blog Posts */
+#container-blog {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 50px 1fr 0.25fr 25px;
+  grid-template-areas:
+    "nav nav"
+    "blog blog"
+    "foot foot";
+}
+
+.blog {
+  display: grid;
+  grid-area: blog;
+  width: auto;
+  height: auto;
+  justify-self: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 50px 2fr;
+  grid-template-areas:
+    "title title"
+    "image art";
+}
+
+.title {
+  grid-area: title;
+  justify-self: center;
+}
+
+.article {
+  grid-area: art;
+  padding: 20px;
+}
+
+.blog-pic {
+  grid-area: image;
+  height: 300px;
+  width: auto;
+  justify-self: center;
+  padding: 20px;
+}
+
+/* Blog Page */
+
+.blog-list {
+  display: grid;
+  padding: 15px 25px;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: ; */
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  padding: 20px;
+  margin: 10 px;
+  
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container-blog {
+  padding: 2px 16px;
+}
+
+.blog-img {
+  height: 250px;
+  width: 100%;
+}
+
+.button {
+  border-radius: 5px;
+  background-color: #c97c5d;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.75em;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+/* Style all font awesome icons */
+.fa {
+  font-size: 2em;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 300px 2fr 1fr 0.25fr;
+    grid-template-areas:
+      "nav"
+      "hd"
+      "main"
+      "side"
+      "foot";
+  }
+
+  .header {
+    grid-area: hd;
+    /* background-color: #d17b88; */
+    background-image: url("../images/dogs_header.jpg");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.25em;
+  }
+
+  .about-me {
+    display: grid;
+    grid-area: about;
+    width: auto;
+    height: auto;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 300px 2fr;
+    grid-template-areas:
+      "name"
+      "pic"
+      "info";
+  }
+
+  .blog-list {
+    display: grid;
+    padding: 15px 25px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .blog {
+    display: grid;
+    grid-area: blog;
+    width: auto;
+    height: auto;
+    justify-self: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 2fr;
+    grid-template-areas:
+      "title"
+      "image"
+      "art";
+  }
+}
